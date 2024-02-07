@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Rose Day</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffd3e6; /* Light pink background */
+            margin: 50px;
+            padding: 20px;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            background: url('heart.png') center/contain no-repeat; /* Replace with your watermark image URL */
+            opacity: 0.1;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+
+        h1 {
+            color: #ff4081; /* Pink heading color */
+        }
+
+        #rose-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        #message {
+            font-size: 24px;
+            color: #333;
+            line-height: 1.8;
+            display: none;
+            margin-top: 20px;
+        }
+
+        #reveal-button {
+            background-color: #ff4081;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Rose Day!</h1>
+    <img id="rose-image" src="rose.png" alt="Rose Image">
+    <br>
+    <button id="reveal-button" onclick="revealMessage()">Click to Reveal Message</button>
+    <p id="message">My Dearest Kasturi,<br>On this special day, I want to express my love for you. Your presence adds fragrance to my life, just like a beautiful rose. Wishing you a day filled with love, joy, and countless happy moments. Happy Rose Day!</p>
+
+    <script>
+        function revealMessage() {
+            document.getElementById('reveal-button').style.display = 'none';
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
